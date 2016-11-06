@@ -11,7 +11,7 @@ mongoose.connect(config.database);
 app.use(bodyParser.json());
 
 app.use('/', auth);
-app.use('/api', cupboards);
-app.use('/api', users);
+app.use('/api/cupboards', cupboards);
+app.use('/api/users', users);
 
 app.listen(8000);
