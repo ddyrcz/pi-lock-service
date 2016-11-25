@@ -4,11 +4,13 @@ var app = require('express')(),
     users = require('./lib/routers/cupboard'),
     mongoose = require('mongoose'),
     config = require('config'),
-    cupboards = require('./lib/routers/cupboard');
+    cupboards = require('./lib/routers/cupboard'),
+    morgan = require('./lib/common/morgan_resolver');
 
 mongoose.connect(config.database);
 
 app.use(bodyParser.json());
+app.use(morgan());
 
 app.use('/', auth);
 app.use('/api/cupboards', cupboards);

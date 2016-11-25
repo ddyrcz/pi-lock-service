@@ -1,0 +1,4 @@
+ {
+    "secret":"thecodinglove.com",
+    "database":"mongodb://localhost:27017/scanner"
+ }
